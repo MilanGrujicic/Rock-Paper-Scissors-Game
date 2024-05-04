@@ -1,9 +1,6 @@
-# LIBS
 import sys
 from random import randint
 from tkinter import *
-
-# WINDOW CREATION
 
 root = Tk()
 
@@ -11,16 +8,11 @@ root.title("Rock Paper Scissors")
 
 root.geometry("450x300")
 
-# FUNCTIONS
-
-
 def exitButtonClicked():
     root.destroy()
 
-
 def computerPlays():
     computerMove = int(randint(0, 2))
-    # print(computerMove)
     if computerMove == 0:
         computerLabel["text"] = "Computer played rock"
     if computerMove == 1:
@@ -29,13 +21,11 @@ def computerPlays():
         computerLabel["text"] = "Computer played scissors"
     return computerMove
 
-
 def userPlaysRock():
     userMove = 0
     computerPlays()
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Rock")
-
 
 def userPlaysPaper():
     userMove = 1
@@ -43,13 +33,11 @@ def userPlaysPaper():
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Paper")
 
-
 def userPlaysScissors():
     userMove = 2
     computerPlays()
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Scissors")
-
 
 def compare(computerMove, userMove):
     w = "You win!"
@@ -69,9 +57,7 @@ def compare(computerMove, userMove):
     elif userMove == 2 and computerMove == 1:
         resultLabel["text"] = l
 
-
 # GUI ELEMENTS
-
 
 firstLabel = Label(root, text="ROCK PAPER SCISSORS GAME, CHOOSE WHAT YOU WANT TO PLAY")
 
