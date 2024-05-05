@@ -9,6 +9,7 @@ root.title("Rock Paper Scissors")
 root.geometry("450x300")
 
 def computerPlays():
+    '''Generates a random move.'''
     computerMove = int(randint(0, 2))
     if computerMove == 0:
         computerLabel["text"] = "Computer played rock"
@@ -19,24 +20,28 @@ def computerPlays():
     return computerMove
 
 def userPlaysRock():
+    '''Compares player's move being rock with random move.'''
     userMove = 0
     computerPlays()
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Rock")
 
 def userPlaysPaper():
+    '''Compares player's move being paper with random move.'''
     userMove = 1
     computerPlays()
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Paper")
 
 def userPlaysScissors():
+    '''Compares player's move being scissors with random move.'''
     userMove = 2
     computerPlays()
     compare(userMove, computerPlays())
     playerLabel.configure(text="Player plays: Scissors")
 
 def compare(computerMove, userMove):
+    '''Compares players input with random move.'''
     w = "You win!"
     l = "You lose!"
     if computerMove == userMove:
