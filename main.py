@@ -8,9 +8,6 @@ root.title("Rock Paper Scissors")
 
 root.geometry("450x300")
 
-def exitButtonClicked():
-    root.destroy()
-
 def computerPlays():
     computerMove = int(randint(0, 2))
     if computerMove == 0:
@@ -83,7 +80,7 @@ computerLabel = Label(root, text="Computer plays")
 
 computerLabel.pack()
 
-closeButton = Button(root, text="EXIT", command=exitButtonClicked)
+closeButton = Button(root, text="EXIT", command=root.destroy())
 
 resultLabel = Label(root, text="Result: ")
 
