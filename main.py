@@ -85,12 +85,12 @@ computerLabel = Label(root, text="Computer plays")
 
 computerLabel.pack()
 
-closeButton = Button(root, text="EXIT", command=root.destroy())
+closeButton = Button(root, text="EXIT", command=root.destroy)
+
+closeButton.pack()
 
 resultLabel = Label(root, text="Result: ")
 
 resultLabel.pack()
-
-closeButton.pack()
 
 root.mainloop()
